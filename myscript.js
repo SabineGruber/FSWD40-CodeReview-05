@@ -61,7 +61,19 @@ $("#img4").append("<img src=" + Persons[3].myPhoto + ">");
 
 $("#likes1").append(Persons[0].likes);
 
+// with variable:
+// $("#button1").click(function() {
+// 	var likesSum1 = (Persons[0].likes) ++;
+// 	$("#likes1").text(likesSum1);
+// });
+
+// without variable:
+// $("#button1").click(function() {
+// 	(Persons[0].likes) ++;
+// 	$("#likes1").text(Persons[0].likes);
+// });
+
 $("#button1").click(function() {
-	var likesSum1 = (Persons[0].likes) + 1;
-	$("#likes1").text(likesSum1);
+var likesSum1 = (Persons[0].likes) ++;
+$("#likes1").text(likesSum1);
 });
