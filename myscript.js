@@ -31,53 +31,53 @@ var Persons = [{
     },
 ];
 
+
 $(document).ready(function() {
 
-$("#name1").append(Persons[0].name);
-$("#surname1").append(Persons[0].surname);
-$("#age1").append(Persons[0].age);
-$("#img1").append("<img src=" + Persons[0].myPhoto + ">");
+//GET NAMES, SURNAMES AND AGE:
+	for (var i = 0; i < 4; i++) {
+		$("#name" + i).append(Persons[i].name);
+		$("#surname" + i).append(Persons[i].surname);
+		$("#age" + i).append(Persons[i].age);
+		$("#img" + i).append("<img src=" + Persons[i].myPhoto + ">");
 
-$("#name2").append(Persons[1].name);
-$("#surname2").append(Persons[1].surname);
-$("#age2").append(Persons[1].age);
-$("#img2").append("<img src=" + Persons[1].myPhoto + ">");
+	};
 
-$("#name3").append(Persons[2].name);
-$("#surname3").append(Persons[2].surname);
-$("#age3").append(Persons[2].age);
-$("#img3").append("<img src=" + Persons[2].myPhoto + ">");
+//GET NUMBER OF LIKES FOR PERSON1 STORED IN OBJECT:
+$("#likes0").append(Persons[0].likes).css({"color": "black", "font-size": "100%"});
 
-$("#name4").append(Persons[3].name);
-$("#surname4").append(Persons[3].surname);
-$("#age4").append(Persons[3].age);
-$("#img4").append("<img src=" + Persons[3].myPhoto + ">");
-
-// Shows counter only after button is clicked
-// $("#button1").click(function() {
-// 	var likesSum1 = (Persons[0].likes) + 1;
-// 	$("#likes1").append(likesSum1);
-// });
-
-$("#likes1").append(Persons[0].likes).css({"color": "red", "font-size": "150%"});
-
-// with variable:
-// $("#button1").click(function() {
-// 	var likesSum1 = (Persons[0].likes) ++;
-// 	$("#likes1").text(likesSum1);
-// });
-
-// without variable:
-// $("#button1").click(function() {
-// 	(Persons[0].likes) ++;
-// 	$("#likes1").text(Persons[0].likes);
-// });
-
-$("#button1").click(function() {
+//COUNT NUMBER OF LIKES FOR PERSON 1 WHEN CLICKED:
+$("#button0").click(function() {
 Persons[0].likes++;
-$("#likes1").text(Persons[0].likes);
+$("#likes0").text(Persons[0].likes).css({"color": "red", "font-size": "120%"});;
 });
 
+//GET NUMBER OF LIKES FOR PERSON2 STORED IN OBJECT:
+$("#likes1").append(Persons[1].likes).css({"color": "black", "font-size": "100%"});
+
+//COUNT NUMBER OF LIKES FOR PERSON2 WHEN CLICKED:
+$("#button1").click(function() {
+Persons[1].likes++;
+$("#likes1").text(Persons[1].likes).css({"color": "red", "font-size": "120%"});;
+});
+
+//GET NUMBER OF LIKES FOR PERSON3 STORED IN OBJECT:
+$("#likes2").append(Persons[2].likes).css({"color": "black", "font-size": "100%"});
+
+//COUNT NUMBER OF LIKES FOR PERSON3 WHEN CLICKED:
+$("#button2").click(function() {
+Persons[2].likes++;
+$("#likes2").text(Persons[2].likes).css({"color": "red", "font-size": "120%"});;
+});
+
+//GET NUMBER OF LIKES FOR PERSON4 STORED IN OBJECT:
+$("#likes3").append(Persons[3].likes).css({"color": "black", "font-size": "100%"});
+
+//COUNT NUMBER OF LIKES FOR PERSON4 WHEN CLICKED:
+$("#button3").click(function() {
+Persons[3].likes++;
+$("#likes3").text(Persons[3].likes).css({"color": "red", "font-size": "120%"});;
+});
 
 
 

@@ -3,10 +3,9 @@
 }
 
 
-
 header {
-    background-color: #8000ff;
- 	padding: 2% 0 2% 0;
+    background-color: #8600b3;
+    padding: 2% 0 2% 0;
 }
 
 #logo {
@@ -18,33 +17,46 @@ header {
 
 
 body {
-    margin: 0;
+    margin: 0 2% 0 2%;
 }
 
-
+h1 {
+    color: white;
+    font-size: 500%;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
 
 .hero-image {
+    width: 100%;
     height: 600px;
-    background: linear-gradient( rgb(128, 0, 255, 0.25),
-    rgb(128, 0, 255, 0.25)),
-    url('../img/computer.jpg');
-    background-size: cover;
+    background: #000 url(../img/computer.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.hero-text {
-    color: white;
-    font-size: 200%;
-    text-align: center;
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: #e699ff;
+    opacity: .3;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
+
 
 .wrapper {
     border: 2px solid #C8C8C8;
-    margin: 0 2% 2% 2%;
+    margin: 0 0 2% 0;
 }
 
 .container {
@@ -57,61 +69,67 @@ body {
     align-content: center;
 }
 
-.person {
+.person-box {
+    width: 100%;
     background-color: #e6b3ff;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
-.container img {
+.person-data {
+    padding-top: 7%;
+}
+
+.person-box img {
     width: 30%;
-    padding: 1% 5% 2% 2%;
-    float:  left;
+    padding: 0 5% 0 2%;
+    float: left;
 }
 
-/*#title-name, #title-surname, #title-age {
-	padding: 10% 2% 2% 2%;
-} */
+#title-name,
+#title-surname,
+#title-age {
+    padding: 10% 2% 2% 2%;
+    font-size: 90%;
+}
 
-#name1, #name2, #name3, #name4 {
-	font-weight: bold;
+#name0,
+#name1,
+#name2,
+#name3,
+#surname0,
+#surname1,
+#surname2,
+#surname3,
+#age0,
+#age1,
+#age2,
+#age3 {
+    font-weight: bold;
+}
+
+.row-likes {
+    padding-top: 2%;
+    text-align: right;
 }
 
 .row-likes ul li {
-	display: inline;
-	margin-left: 1%;
+    display: inline;
+    margin-left: 2%;
 }
 
 button {
-	border-radius: 8px;
-	background-color: #adebeb;
-	font-size: 90%;
-	
-}
-
-#likes1, #likes2, #likes3, #likes4 {
-	font-size: 100%,
-	color: red;
-	
+    border-radius: 6px;
+    background-color: #adebeb;
+    padding: 8px 20px;
+    font-size: 100%;
 }
 
 #heart {
-	width: 5%;
-	
+    width: 5%;
+    float: right;
+    padding-top: 1%;
 }
-
-
-/*#img1 {
-	display: inline;
-	float:left;
-	clear: left;
-	background-color: orange;
-}
-
-#name1, #surname1, #age1 {
-	display: inline;
-	float: right;
-	clear: both;
-	background-color: blue;
-} */
 
 footer {
     text-align: center;
@@ -123,3 +141,22 @@ footer hr {
     border-top: 2px solid grey;
 }
 
+@media screen and (max-width: 920px) {
+    h1 {
+        font-size: 300%;
+    }
+    .hero-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .container {
+        grid-template-columns: 80%;
+    }
+}
+
+@media screen and (min-width: 921px) {
+    .container {
+        grid-template-columns: 40% 40%;
+    }
+}
