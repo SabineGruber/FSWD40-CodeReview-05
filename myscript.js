@@ -31,7 +31,7 @@ var Persons = [{
     },
 ];
 
-
+$(document).ready(function() {
 
 $("#name1").append(Persons[0].name);
 $("#surname1").append(Persons[0].surname);
@@ -59,7 +59,7 @@ $("#img4").append("<img src=" + Persons[3].myPhoto + ">");
 // 	$("#likes1").append(likesSum1);
 // });
 
-$("#likes1").append(Persons[0].likes);
+$("#likes1").append(Persons[0].likes).css({"color": "red", "font-size": "150%"});
 
 // with variable:
 // $("#button1").click(function() {
@@ -74,6 +74,11 @@ $("#likes1").append(Persons[0].likes);
 // });
 
 $("#button1").click(function() {
-var likesSum1 = (Persons[0].likes) ++;
-$("#likes1").text(likesSum1);
+Persons[0].likes++;
+$("#likes1").text(Persons[0].likes);
+});
+
+
+
+
 });
